@@ -1,0 +1,80 @@
+POST http://localhost:4000/api/posts/add
+Content-Type: application/json
+Authorization: Berar eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VmOTZlY2NiY2YyODY0ZjRkMDczZDkiLCJpYXQiOjE2ODA2MzcwOTF9.iOvJZpaEoLIbqSu4YPv_2IjVX0lGphUUrbX8s6C0nLE
+
+{
+    "title":"ovo je novi titl i ovo"
+}
+
+###
+GET  http://localhost:4000/api/posts/allPosts?page=1&limit=10&sortBy=rate
+###
+GET   http://localhost:4000/api/posts/allMy
+Authorization: Berar eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VkNWMzYWVlNmFjOWI0NzU4MDUyOTkiLCJpYXQiOjE2NzY1MDAwMjd9.MLXgnHe9Z3F3QljvsSE7FSo0ABHxP4s5G64t6_2dFAs
+
+
+###
+POST http://localhost:4000/api/posts/delete
+Content-Type: application/json
+Authorization: Berar eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VkMDVmNzk2ZTNmZmEyNTc0MmFmZjQiLCJpYXQiOjE2NzY0OTgxNjJ9.LrrOAnO6M0YktYm2DHGH-OYLp68UCP6G994hjq95Cvs
+
+
+{
+    "_id":"63ed56028fbdc01b0dab7407"
+}
+###
+PATCH http://localhost:4000/api/posts/update
+Content-Type: application/json
+Authorization: Berar eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VkMDVmNzk2ZTNmZmEyNTc0MmFmZjQiLCJpYXQiOjE2NzY0OTgxNjJ9.LrrOAnO6M0YktYm2DHGH-OYLp68UCP6G994hjq95Cvs
+
+
+{
+    "_id":"63ed5644ef6d765d1208d529",
+    "title":"ovo je novi update"
+}
+
+
+###
+POST http://localhost:4000/api/users/singup
+Content-Type: application/json
+
+{
+    "email":"hamzaaa@gmail.com",
+    "password":"123"
+}
+###
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email":"hamzaaa@gmail.com",
+    "password":"123"
+}
+###
+POST http://localhost:4000/api/comments/add
+Content-Type: application/json
+Authorization: Berar eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VmOTZlY2NiY2YyODY0ZjRkMDczZDkiLCJpYXQiOjE2ODA2NDMyNTJ9.xZmAS4ZjAemOredzSnyFi4VmroAAgqpD77-2jKIpvrU
+
+{
+"content":"prelos",
+"postId":"642f0c0309aa9ddb356950c7",
+"userName":"haks",
+"rate":"3"
+}
+
+###
+POST http://localhost:4000/api/comments/all
+Content-Type: application/json
+Authorization: Berar eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI0MTY5OGU3YTY1NGVmM2MxNjUxMjciLCJpYXQiOjE2ODA0NjE4NzJ9.5c7ZF1o1VNxcQtadMgaNhDnzEC5vABlIbWoy0m3DYPM
+
+{
+"postId":"63ef917fcbcf2864f4d073cc"
+}
+
+###
+DELETE http://localhost:4000/api/comments/delete
+Content-Type: application/json
+
+{
+"_id":"640a794e694967e15695e70d"
+}
