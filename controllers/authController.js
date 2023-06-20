@@ -25,14 +25,14 @@ const singup = async (req, res) => {
     if (exsistName !== null) {
       throw Error("name already exsist");
     }
-    /*
+
     if (!validator.isEmail(email)) {
       throw Error("Email is not valid");
     }
 
     if (!validator.isStrongPassword(password)) {
       throw Error("Password is not strong enough");
-    }*/
+    }
     const hash = await bcrypt.hash(password, 10);
     const newUser = await User.create({
       email: email,
