@@ -9,7 +9,7 @@ mongoose.set("strictQuery", false);
 //middleware
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://schoolapp-pd2j.onrender.com/"],
   })
 );
 app.use(express.json());
