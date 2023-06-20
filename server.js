@@ -9,7 +9,7 @@ mongoose.set("strictQuery", false);
 //middleware
 app.use(
   cors({
-    origin: ["*"],
+    origin: "*",
   })
 );
 app.use(express.json());
